@@ -10,6 +10,8 @@ static BOOL isKaiaToggleSelected;
 
 static void aheadOfYou() {
 
+	// Sligthly modified from -> https://github.com/ren7995/Anne
+	// Pov: idfk if this is working or not since my main device with FaceID ain't jailbroken :lmfaoEpic:
 	NSString *nsFaceIDUsageDescription = @"I need your permission for this meatbag";
 	NSString *nsFaceIDUsageDescriptionKey = @"NSFaceIDUsageDescription";
 
