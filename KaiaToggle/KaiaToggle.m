@@ -3,7 +3,6 @@
 
 @implementation KaiaToggle {
 
-	BOOL _selected;
 	NSUserDefaults *defaults;
 
 }
@@ -27,11 +26,10 @@
 - (BOOL)isSelected { return [defaults boolForKey: @"kaiaToggleSelected"]; }
 - (void)setSelected:(BOOL)selected {
 
-	_selected = selected;
-	[defaults setBool:_selected forKey: @"kaiaToggleSelected"];
+	[defaults setBool:selected forKey: @"kaiaToggleSelected"];
 
 	[self setToggleState];
-	[super setSelected:selected];
+	[super setSelected: selected];
 
 }
 
@@ -45,7 +43,7 @@
 
 
 - (UIImage *)iconGlyph { return [UIImage systemImageNamed: @"eye"]; }
-- (UIImage *)selectedIconGlyph { return [UIImage systemImageNamed:@"eye.slash"]; }
+- (UIImage *)selectedIconGlyph { return [UIImage systemImageNamed: @"eye.slash"]; }
 - (UIColor *)selectedColor { return UIColor.systemPurpleColor; }
 
 @end
