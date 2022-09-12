@@ -8,22 +8,6 @@
 
 static BOOL isKaiaToggleSelected;
 
-static void aheadOfYou() {
-
-	// Sligthly modified from -> https://github.com/ren7995/Anne
-	// Pov: idfk if this is working or not since my main device with FaceID ain't jailbroken :lmfaoEpic:
-	NSString *nsFaceIDUsageDescription = @"I need your permission for this meatbag";
-	NSString *nsFaceIDUsageDescriptionKey = @"NSFaceIDUsageDescription";
-
-	NSURL *plistURL = [NSURL URLWithString: @"file:///Applications/MobileSlideShow.app/Info.plist"];
-	NSMutableDictionary *plistDict = [NSMutableDictionary dictionaryWithContentsOfURL: plistURL];
-
-	if(plistDict[nsFaceIDUsageDescriptionKey] != nil) return;
-	[plistDict setObject:nsFaceIDUsageDescription forKey: nsFaceIDUsageDescriptionKey];
-	[plistDict writeToURL:plistURL error: nil];
-
-}
-
 static void (*origVDL)(PXNavigationListGadget *, SEL);
 static void overrideVDL(PXNavigationListGadget *self, SEL _cmd) {
 
@@ -70,7 +54,6 @@ static void new_toggleKaiaState(PXNavigationListGadget *self, SEL _cmd, NSNotifi
 
 __attribute__((constructor)) static void init() {
 
-	aheadOfYou();
 	MSHookMessageEx(NSClassFromString(@"PXNavigationListGadget"), @selector(viewDidLoad), (IMP) &overrideVDL, (IMP *) &origVDL);
 	MSHookMessageEx(NSClassFromString(@"PXNavigationListGadget"), @selector(tableView:didSelectRowAtIndexPath:), (IMP) &overrideDidSelectRowAtIndexPath, (IMP *) &origDidSelectRowAtIndexPath);
 

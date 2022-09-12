@@ -1,4 +1,4 @@
-TARGET := iphone:clang:14.5:latest
+export TARGET := iphone:clang:14.5:latest
 INSTALL_TARGET_PROCESSES = SpringBoard
 
 SUBPROJECTS += KaiaToggle Tweak
