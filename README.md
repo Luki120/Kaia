@@ -2,6 +2,10 @@
 
 <img src="https://raw.githubusercontent.com/Luki120/luki120.github.io/master/assets/Misc/Kaia.png" width="300">
 
+## Disclaimer
+
+* Despite I know how to make it work with FaceID I'm not being able to test it properly due to weird issues either with my device, checkra1n or the iOS version I'm on (14.5.1). On iOS 14.3 I had no such issues, so there's probably something funky going on there. Once I sort this out or my main phone gets jailbroken, FaceID support will most likely be added.
+
 ## Socials
 
 * [Twitter](https://twitter.com/Lukii120)
