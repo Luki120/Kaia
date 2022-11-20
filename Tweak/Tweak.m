@@ -1,6 +1,7 @@
-#import "Headers/Common.h"
+@import UIKit;
 @import CydiaSubstrate;
 @import LocalAuthentication;
+#import "Headers/Common.h"
 
 
 @interface PXNavigationListGadget : UIViewController

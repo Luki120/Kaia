@@ -1,5 +1,5 @@
-#import "Headers/Common.h"
 #import <ControlCenterUIKit/CCUIToggleModule.h>
+#import "Headers/Common.h"
 
 
 @interface KaiaToggle : CCUIToggleModule
